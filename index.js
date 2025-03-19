@@ -48,12 +48,6 @@ app.get('/edit/:id', async (req, res) => {
     res.render('edit', { title: 'Edit Post', post });
 });
 
-// app.post('/edit/:id', async (req, res) => {
-//     const { title, content } = req.body;
-//     await postModel.findByIdAndUpdate(req.params.id, { title, content });
-//     res.redirect('/');
-// });
-
 app.post("/edit/:id",async(req,res)=>{
     const {title,content} =req.body
 
