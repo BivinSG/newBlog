@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Blog</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      height: 100vh; /* Full height of the viewport */
+      margin: 0; /* Remove default margin */
+      display: flex; /* Use flexbox */
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+    }
+
+    .container {
+      max-width: 600px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Ensure container fills the screen on smaller devices */
+    }
+
+    h1 {
+      text-align: center;
+      color: #343a40;
+      margin-bottom: 30px; /* Space between title and form */
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    textarea {
+      resize: vertical;
+      width: 100%; /* Make textarea full width */
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      width: 100%; /* Full-width button */
+      margin-top: 15px; /* Space between textarea and button */
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .home-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px; /* Space between form and home button */
+    }
+
+    .home-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mini Blog</h1>
+
+    <form action="/posts" method="POST">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" class="form-control" required>
+      </div><br>
+
+      <div>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" class="form-control" rows="5" required></textarea>
+      </div><br>
+
+      <button type="submit">Add Post</button>
+    </form>
+
+    <button onclick="window.location.href = '/'" class="home-btn">Go to Home Page</button>
+
+  </div>
+</body>
+</html>
