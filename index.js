@@ -2,7 +2,6 @@ const express = require('express');
 const postModel = require("./models/postModel")
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();
 
 const app = express();
 const port = 3000;
